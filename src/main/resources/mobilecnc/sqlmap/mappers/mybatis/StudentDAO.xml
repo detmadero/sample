@@ -14,4 +14,35 @@
 		WHERE stu.stu_id = #{studentId}
 	</select>
 	
+	<insert id="insertStudent" databaseId="mysql">
+		INSERT INTO students (
+			stu_id,
+			stu_name,
+			stu_gender,
+			stu_age,
+			stu_score
+		) VALUES (
+			#{id},
+			#{name},
+			#{gender},
+			#{age},
+			#{score}
+		);
+	</insert>
+	
+	<update id="updateStudent" databaseId="mysql">
+		UPDATE students SET
+			stu_name = #{name}, 
+			stu_gender = #{gender}, 
+			stu_age = #{age}, 
+			stu_score = #{score}
+		WHERE stu_id = #{id}
+	</update>
+	
+	<delete id="deleteStudent" databaseId="mysql">
+		DELETE 
+		FROM students
+		WHERE stu_id = #{studentId}
+	</delete>
+	
 </mapper>
