@@ -11,4 +11,10 @@ public interface StudentDAO {
 	public List<StudentDTO> getStudentList();
 	
 	public StudentDTO getStudentByStudentId(@Param("studentId") String studentId);
+	
+	public void insertStudent(StudentDTO student);
+	
+	public void updateStudent(StudentDTO student);
+	
+	public void deleteStudent(@Param("studentId") String studentId);
 }
